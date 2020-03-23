@@ -721,7 +721,7 @@ def handle_message(event):
                     )
                 ),
                 ImageCarouselColumn(
-                    image_url = 'https://upload.wikimedia.org/wikipedia/zh/6/68/A_Quiet_Place_Poster.jpg',
+                    image_url = 'https://the1851chronicle.files.wordpress.com/2018/04/screen-shot-2018-04-26-at-1-33-23-pm.png',
                     action = URITemplateAction(
                         label = '噤界',
                         uri = 'https://pttplay.com/vod-play-id-RjlB-src-1-num-6x.html'
