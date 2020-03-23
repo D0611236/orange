@@ -58,7 +58,7 @@ def handle_message(event):
             ]
         )
         )
-    elif(get == 'Drama'):
+    if(get == 'Drama'):
         #print("Image Carousel")
         message = TemplateSendMessage(
         alt_text = 'Drama for mobile.(updated irregularly)',
