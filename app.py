@@ -8,21 +8,30 @@ from linebot.exceptions import (
 )
 from linebot.models import *
 
+import random
+
+
+
 app = Flask(__name__)
 
 # Channel Access Token
 line_bot_api = LineBotApi('zE1MsJwQJlGNJKDKJ5wO8wgjOS+9YP0DXQp2jHQp2wS0ii+MuGhSJdQjdypF8qJPsRdGpQGvrwxQ483M/PZXLq0RFCvzKGadfxAbE+I+EQb2kFR39YRanwCyKqlDG+CfvV1y66GY+MBMeR/pFKuDkgdB04t89/1O/w1cDnyilFU=')
+#or line_bot_api = 'Channel_token'
+
 # Channel Secret
 handler = WebhookHandler('2093c6299585fbbc306fc82570e55755')
+#or handler = 'Channel_secret'
 
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
 def callback():
     # get X-Line-Signature header value
     signature = request.headers['X-Line-Signature']
+    
     # get request body as text
     body = request.get_data(as_text=True)
     app.logger.info("Request body: " + body)
+    
     # handle webhook body
     try:
         handler.handle(body, signature)
@@ -33,8 +42,9 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    get = TextSendMessage(text=event.message.text)
-    
+    get = event.message.text
+#event.gessage.text接收使用者文字訊息
+
     if(get == 'd'):
         #print("Image Carousel")
         message = TemplateSendMessage(
@@ -58,7 +68,7 @@ def handle_message(event):
             ]
         )
         )
-    if(get == 'Drama'):
+    elif(get == 'Drama'):
         #print("Image Carousel")
         message = TemplateSendMessage(
         alt_text = 'Drama for mobile.(updated irregularly)',
@@ -95,7 +105,10 @@ def handle_message(event):
             ]
         )
         )
-    
+    else:
+        message = TextSendMessage(text = get)
+
+
     line_bot_api.reply_message(event.reply_token, message)
 
 if __name__ == "__main__":
