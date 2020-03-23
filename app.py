@@ -68,7 +68,7 @@ def handle_message(event):
             ]
         )
         )
-    elif(get == 'Drama'):
+    if(get == 'Drama'):
         #print("Image Carousel")
         message = TemplateSendMessage(
         alt_text = 'Drama for mobile.(updated irregularly)',
@@ -105,8 +105,6 @@ def handle_message(event):
             ]
         )
         )
-    else:
-        message = TextSendMessage(text = get)
 
 
     line_bot_api.reply_message(event.reply_token, message)
