@@ -695,7 +695,6 @@ def handle_message(event):
 #############################################
 #回傳ImageCarouselTemplate訊息
     if(get == 'Drama'):
-        #print("Image Carousel")
         message = TemplateSendMessage(
         alt_text = 'Drama for mobile.(updated irregularly)',
             template = ImageCarouselTemplate(
@@ -726,6 +725,35 @@ def handle_message(event):
                         action = URITemplateAction(
                             label = '夕霧花園',
                             uri = 'http://www.777drama.com/vod/14/19322play.html?19322-1-4'
+                        )
+                    ),
+                    ImageCarouselColumn(
+                        image_url = 'https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg',
+                        action = URITemplateAction(
+                            label = '小丑',
+                            uri = 'https://pttplay.com/vod-play-id-kXxBp-src-4-num-mV.html'
+                        )
+                    )
+                ]
+            )
+        )
+    if(get == 'TVshow'):
+        message = TemplateSendMessage(
+        alt_text = 'TVshow for mobile.(updated irregularly)',
+            template = ImageCarouselTemplate(
+                columns = [
+                    ImageCarouselColumn(
+                        image_url = 'https://upload.wikimedia.org/wikipedia/zh/thumb/c/cb/Crash_Landing_on_You.png/250px-Crash_Landing_on_You.png',
+                        action = URITemplateAction(
+                            label = '愛的迫降',
+                            uri = 'https://www.dramasq.com/kr191214/'
+                        )
+                    ),
+                    ImageCarouselColumn(
+                        image_url = 'https://upload.wikimedia.org/wikipedia/zh/b/ba/Descendent_of_the_Sun.jpg',
+                        action = URITemplateAction(
+                            label = '太陽的後裔',
+                            uri = 'https://lovetvshow.cc/vodplay/81321-1-1.html'
                         )
                     )
                 ]
