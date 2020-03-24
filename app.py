@@ -495,24 +495,14 @@ def handle_message(event):
                 original_content_url = 'https://i.imgur.com/OlgCSqb.jpg',
                 preview_image_url = 'https://i.imgur.com/OlgCSqb.jpg'
             )
+    if(get == '小手拉大手'):
+        message = ImageSendMessage(
+            original_content_url = 'https://imgur.com/jDoH.jpg',
+            preview_image_url = 'https://imgur.com/jDoH.jpg'
+        )
     
 #############################################
 #回傳ButtonsTemplate訊息
-    if(get == '汪'):
-        message = TemplateSendMessage(
-            alt_text = '用手機看好不好?',
-            template = ButtonsTemplate(
-                title = '測試用',
-                text = '預祝各位期末ALL PASS',
-                thumbnail_image_url = 'https://i.imgur.com/74HtSJK.jpg',
-                actions = [
-                    MessageTemplateAction(
-                        label = '伯朗咖啡',
-                        text = '好喝'
-                    )
-                ]
-            )
-        )
     if('哈' in get):
         message = TemplateSendMessage(
             alt_text = '打開手機，許願池在你的手機裡?',
@@ -532,6 +522,10 @@ def handle_message(event):
                     URITemplateAction(
                         label = '呱風螫天 feat.韶洋',
                         uri = 'https://youtu.be/jyyq8UmJBh0'
+                    ),
+                    MessageTemplateAction(
+                        label = 'Smile.璇',
+                        text = '小手拉大手'
                     )
                 ]
             )
@@ -704,38 +698,38 @@ def handle_message(event):
         #print("Image Carousel")
         message = TemplateSendMessage(
         alt_text = 'Drama for mobile.(updated irregularly)',
-        template = ImageCarouselTemplate(
-            columns = [
-                ImageCarouselColumn(
-                    image_url = 'https://img.edwardmovieclub.com/uploads/20200117230248_9.jpg',
-                    action = URITemplateAction(
-                        label = '不完美的正義',
-                        uri = 'http://www.777drama.com/vod/14/18320play.html?18320-1-3'
+            template = ImageCarouselTemplate(
+                columns = [
+                    ImageCarouselColumn(
+                        image_url = 'https://img.edwardmovieclub.com/uploads/20200117230248_9.jpg',
+                        action = URITemplateAction(
+                            label = '不完美的正義',
+                            uri = 'http://www.777drama.com/vod/14/18320play.html?18320-1-3'
+                        )
+                    ),
+                    ImageCarouselColumn(
+                        image_url = 'https://pic.pimg.tw/q36genius/1571127285-4176158080_wn.jpg',
+                        action = URITemplateAction(
+                            label = '惡鄰布局',
+                            uri = 'http://www.5goup.com/user/getmovie/show/5c078cc7d55812466c8887c7'
+                        )
+                    ),
+                    ImageCarouselColumn(
+                        image_url = 'https://the1851chronicle.files.wordpress.com/2018/04/screen-shot-2018-04-26-at-1-33-23-pm.png',
+                        action = URITemplateAction(
+                            label = '噤界',
+                            uri = 'https://pttplay.com/vod-play-id-RjlB-src-1-num-6x.html'
+                        )
+                    ),
+                    ImageCarouselColumn(
+                        image_url = 'https://media.putyourself.in/pysiuploads/2019/10/event-the-garden-of-evening-mists-1118.jpg',
+                        action = URITemplateAction(
+                            label = '夕霧花園',
+                            uri = 'http://www.777drama.com/vod/14/19322play.html?19322-1-4'
+                        )
                     )
-                ),
-                ImageCarouselColumn(
-                    image_url = 'https://pic.pimg.tw/q36genius/1571127285-4176158080_wn.jpg',
-                    action = URITemplateAction(
-                        label = '惡鄰布局',
-                        uri = 'http://www.5goup.com/user/getmovie/show/5c078cc7d55812466c8887c7'
-                    )
-                ),
-                ImageCarouselColumn(
-                    image_url = 'https://the1851chronicle.files.wordpress.com/2018/04/screen-shot-2018-04-26-at-1-33-23-pm.png',
-                    action = URITemplateAction(
-                        label = '噤界',
-                        uri = 'https://pttplay.com/vod-play-id-RjlB-src-1-num-6x.html'
-                    )
-                ),
-                ImageCarouselColumn(
-                    image_url = 'https://media.putyourself.in/pysiuploads/2019/10/event-the-garden-of-evening-mists-1118.jpg',
-                    action = URITemplateAction(
-                        label = '夕霧花園',
-                        uri = 'http://www.777drama.com/vod/14/19322play.html?19322-1-4'
-                    )
-                )
-            ]
-        )
+                ]
+            )
         )
 
 
