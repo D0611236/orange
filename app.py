@@ -522,10 +522,6 @@ def handle_message(event):
                     URITemplateAction(
                         label = '呱風螫天 feat.韶洋',
                         uri = 'https://youtu.be/jyyq8UmJBh0'
-                    ),
-                    MessageTemplateAction(
-                        label = 'Smile.璇',
-                        text = '小手拉大手'
                     )
                 ]
             )
