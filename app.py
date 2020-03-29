@@ -49,7 +49,7 @@ def handle_message(event):
 #############################################
 #回傳文字訊息
     if(get == 'stock'):
-        message = TextSendMessage(text = 'https://medium.com/ai%E8%82%A1%E4%BB%94/%E5%AD%B8%E6%9C%83%E7%94%A8%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E9%A0%90%E6%B8%AC%E8%82%A1%E5%83%B9-%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B%E6%95%99%E5%AD%B8%E8%88%87%E5%AF%A6%E4%BD%9C-b057e7343ca4\nhttps://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/548204/\nhttps://ithelp.ithome.com.tw/users/20111390/ironman/1791?page=3')
+        message = TextSendMessage(text = 'https://medium.com/ai%E8%82%A1%E4%BB%94/%E5%AD%B8%E6%9C%83%E7%94%A8%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E9%A0%90%E6%B8%AC%E8%82%A1%E5%83%B9-%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B%E6%95%99%E5%AD%B8%E8%88%87%E5%AF%A6%E4%BD%9C-b057e7343ca4\n\nhttps://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/548204/\n\nhttps://ithelp.ithome.com.tw/users/20111390/ironman/1791?page=3')
     if(get == '？' or get =='?'):
         message = TextSendMessage(text = '?')
     if('如何' in get):
@@ -497,11 +497,6 @@ def handle_message(event):
                 original_content_url = 'https://i.imgur.com/OlgCSqb.jpg',
                 preview_image_url = 'https://i.imgur.com/OlgCSqb.jpg'
             )
-    if(get == '小手拉大手'):
-        message = ImageSendMessage(
-            original_content_url = 'https://imgur.com/jDoH.jpg',
-            preview_image_url = 'https://imgur.com/jDoH.jpg'
-        )
     
 #############################################
 #回傳ButtonsTemplate訊息
@@ -536,21 +531,21 @@ def handle_message(event):
                 text = '感謝你的注意.',
                 thumbnail_image_url = 'https://i.imgur.com/YjNKSS5.jpg',
                 actions = [
-                    URITemplateAction(
-                        label = '不完美的正義',
-                        uri = 'http://www.777drama.com/vod/14/18320play.html?18320-1-3'
+                    MessageTemplateAction(
+                        label = '上次更新時間.(Last Updated)',
+                        text = 'March 30, 2020, Monday, 01:24:13.'
                     ),
-                    URITemplateAction(
-                        label = '惡鄰布局',
-                        uri = 'http://www.5goup.com/user/getmovie/show/5c078cc7d55812466c8887c7'
+                    MessageTemplateAction(
+                        label = '電影入口.(Movie Entrance)',
+                        text = 'Drama'
                     ),
-                    URITemplateAction(
-                        label = '噤界',
-                        uri = 'https://pttplay.com/vod-play-id-RjlB-src-1-num-6x.html'
+                    MessageTemplateAction(
+                        label = 'TVshow入口.(TVshow Entrance)',
+                        text = 'TVshow'
                     ),
-                    URITemplateAction(
-                        label = '夕霧花園',
-                        uri = 'http://www.777drama.com/vod/14/19322play.html?19322-1-4'
+                    MessageTemplateAction(
+                        label = '其他功能./',
+                        text = '橘子'
                     )
                 ]
             )
@@ -730,6 +725,13 @@ def handle_message(event):
                         action = URITemplateAction(
                             label = '小丑',
                             uri = 'https://pttplay.com/vod-play-id-kXxBp-src-4-num-mV.html'
+                        )
+                    ),
+                    ImageCarouselColumn(
+                        image_url = 'https://upload.wikimedia.org/wikipedia/zh/d/d4/The_Invisible_Man_2020_poster.jpg',
+                        action = URITemplateAction(
+                            label = '隱形人',
+                            uri = 'http://www.134mov.com/vod/11/19460play.html?19460-0-1'
                         )
                     )
                 ]
