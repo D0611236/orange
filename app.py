@@ -532,15 +532,15 @@ def handle_message(event):
                 thumbnail_image_url = 'https://i.imgur.com/YjNKSS5.jpg',
                 actions = [
                     MessageTemplateAction(
-                        label = '上次更新時間.(Last Updated)',
-                        text = 'March 30, 2020, Monday, 01:24:13.'
+                        label = '上次更新時間.',
+                        text = 'March 30, 2020, Monday, 01:24:13.(Last Updated)'
                     ),
                     MessageTemplateAction(
-                        label = '電影入口.(Movie Entrance)',
+                        label = '電影入口.',
                         text = 'Drama'
                     ),
                     MessageTemplateAction(
-                        label = 'TVshow入口.(TVshow Entrance)',
+                        label = 'TVshow入口.',
                         text = 'TVshow'
                     ),
                     MessageTemplateAction(
