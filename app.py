@@ -9,17 +9,19 @@ from linebot.exceptions import (
 from linebot.models import *
 
 import random
+import os
 
-
+orangeApi = os.environ.get('orangeToken')
+orangeHandler = os.environ.get('orangeSecret')
 
 app = Flask(__name__)
 
 # Channel Access Token
-line_bot_api = LineBotApi('zE1MsJwQJlGNJKDKJ5wO8wgjOS+9YP0DXQp2jHQp2wS0ii+MuGhSJdQjdypF8qJPsRdGpQGvrwxQ483M/PZXLq0RFCvzKGadfxAbE+I+EQb2kFR39YRanwCyKqlDG+CfvV1y66GY+MBMeR/pFKuDkgdB04t89/1O/w1cDnyilFU=')
+line_bot_api = LineBotApi(orangeApi)
 #or line_bot_api = 'Channel_token'
 
 # Channel Secret
-handler = WebhookHandler('2093c6299585fbbc306fc82570e55755')
+handler = WebhookHandler(orangeHandler)
 #or handler = 'Channel_secret'
 
 # 監聽所有來自 /callback 的 Post Request
