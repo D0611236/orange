@@ -76,68 +76,6 @@ def handle_message(event):
         message = TextSendMessage(text = '帥帥帥帥')
     if(get == '不知道'):
         message = TextSendMessage(text = '我也不知道')
-    if(get == '飲料骰子'):
-        result = random.randint(0, 5)
-        if(result == 0):
-            message = TextSendMessage(text = '超商飲料')
-        if(result == 1):
-            message = TextSendMessage(text = '你他媽不會喝水嘛?')
-        if(result == 2):
-            message = TextSendMessage(text = '迷迷迷客夏')
-        if(result == 3):
-            message = TextSendMessage(text = '喝清心好開心')
-        if(result == 4):
-            message = TextSendMessage(text = '來個五十杯五十嵐')
-        if(result > 4):
-            message = TextSendMessage(text = '圓石來電')
-    if(get == '逢甲肚子餓'):
-        result = random.randint(0, 22)
-        if(result == 0):
-            message = TextSendMessage(text = '超商食品')
-        if(result == 1):
-            message = TextSendMessage(text = '甲賽')
-        if(result == 2):
-            message = TextSendMessage(text = '好而大居酒屋')
-        if(result == 3):
-            message = TextSendMessage(text = '隨義煮')
-        if(result == 4):
-            message = TextSendMessage(text = '來來魯肉飯')
-        if(result == 5):
-            message = TextSendMessage(text = '職人牛排')
-        if(result == 6):
-            message = TextSendMessage(text = '六扇門')
-        if(result == 7):
-            message = TextSendMessage(text = '九湯屋')
-        if(result == 8):
-            message = TextSendMessage(text = '七味廚坊')
-        if(result == 9):
-            message = TextSendMessage(text = '豐成麵館')
-        if(result == 10):
-            message = TextSendMessage(text = '吉蜂蒸餃')
-        if(result == 11):
-            message = TextSendMessage(text = '八方雲集')
-        if(result == 12):
-            message = TextSendMessage(text = '大丁拉麵')
-        if(result == 13):
-            message = TextSendMessage(text = '九州拉麵')
-        if(result == 14):
-            message = TextSendMessage(text = '黑盒子')
-        if(result == 15):
-            message = TextSendMessage(text = '擄胃專家')
-        if(result == 16):
-            message = TextSendMessage(text = '吉野烤肉飯')
-        if(result == 17):
-            message = TextSendMessage(text = '紅辣椒')
-        if(result == 18):
-            message = TextSendMessage(text = '小辣椒')
-        if(result == 19):
-            message = TextSendMessage(text = '麥當勞')
-        if(result == 20):
-            message = TextSendMessage(text = '鴨樓鴨肉飯')
-        if(result == 21):
-            message = TextSendMessage(text = '泡麵')
-        if(result > 21):
-            message = TextSendMessage(text = '粥遊天下')
 
 #############################################
 #回傳圖片訊息
@@ -653,6 +591,25 @@ def handle_message(event):
                             MessageTemplateAction(
                                 label = '點歌許願池',
                                 text = '哈'
+                            )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url = 'https://i.imgur.com/Ym2TxyL.jpg',
+                        title = '我結婚的時候,請妳幫我一件事',
+                        text = '請妳嫁給我',
+                        actions = [
+                            MessageTemplateAction(
+                                label = '線上看( ͡° ͜ʖ ͡°)',
+                                text = 'drama'
+                            ),
+                            URITemplateAction(
+                                label = '搶票/選課外掛',
+                                uri = 'https://drive.google.com/open?id=1xvDDRoIrH9W5wCTkNg0tf0juZqV4ZBsL'
+                            ),
+                            URITemplateAction(
+                                label = '預測股市(StockPredict.)',
+                                uri = 'https://drive.google.com/open?id=1oix2iVs6tsT2NHRbmvxJHd91NXZs_cRu'
                             )
                         ]
                     )
