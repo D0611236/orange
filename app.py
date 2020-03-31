@@ -721,7 +721,7 @@ def handle_message(event):
 
 #############################################
 #探索用戶
-    profile = line_bot_api.get_profile(user_id)
+    profile = line_bot_api.get_profile()
     print(profile.display_name)
     print(profile.user_id)
 
