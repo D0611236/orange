@@ -696,7 +696,7 @@ def handle_message(event):
                         image_url = 'https://upload.wikimedia.org/wikipedia/zh/d/d4/The_Invisible_Man_2020_poster.jpg',
                         action = URITemplateAction(
                             label = '隱形人',
-                            uri = 'http://www.134mov.com/vod/11/19460play.html?19460-0-1'
+                            uri = 'http://www.99kubo.tv/vod-play-id-150195-sid-0-pid-1-zuida.html'
                         )
                     )
                 ]
