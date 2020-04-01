@@ -437,6 +437,12 @@ def handle_message(event):
                 original_content_url = 'https://i.imgur.com/OlgCSqb.jpg',
                 preview_image_url = 'https://i.imgur.com/OlgCSqb.jpg'
             )
+    if('https://www.instagram.com/p/' in get):
+        igSave = get + 'media/?size=l'
+        message = ImageSendMessage(
+            original_content_url = igSave,
+            preview_image_url = igSave
+        )
     
 #############################################
 #回傳ButtonsTemplate訊息
