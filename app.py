@@ -438,10 +438,10 @@ def handle_message(event):
                 preview_image_url = 'https://i.imgur.com/OlgCSqb.jpg'
             )
     if('https://www.instagram.com/p/' in get):
-        igSave = get + 'media/?size=l'
+        instagramSave = get[:get.find('?')] + 'media/?size=l'
         message = ImageSendMessage(
-            original_content_url = igSave,
-            preview_image_url = igSave
+            original_content_url = instagramSave,
+            preview_image_url = instagramSave
         )
     
 #############################################
@@ -459,8 +459,8 @@ def handle_message(event):
                         text = '肥胖熊'
                     ),
                     MessageTemplateAction(
-                        label = '晶球',
-                        text = '想出現在圖庫裡? 請將你的照片郵寄至ricky870921@gmail.com'
+                        label = 'instagram照片存取',
+                        text = '複製貼文連結 → 貼上 → 取得.'
                     ),
                     URITemplateAction(
                         label = '呱風螫天 feat.韶洋',
