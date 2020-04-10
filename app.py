@@ -479,7 +479,7 @@ def handle_message(event):
                 actions = [
                     MessageTemplateAction(
                         label = '上次更新時間.',
-                        text = 'March 30, 2020, Monday, 01:24:13.(Last Updated)'
+                        text = 'April 11, 2020, Saturday, 01:16:13.(Last Updated)'
                     ),
                     MessageTemplateAction(
                         label = '電影入口.',
@@ -661,7 +661,7 @@ def handle_message(event):
                         image_url = 'https://img.edwardmovieclub.com/uploads/20200117230248_9.jpg',
                         action = URITemplateAction(
                             label = '不完美的正義',
-                            uri = 'http://www.777drama.com/vod/14/18320play.html?18320-1-3'
+                            uri = 'https://drive.google.com/open?id=1n2Q5FzkdiZZQCKvs-WZQRU8s--V0j0QW'
                         )
                     ),
                     ImageCarouselColumn(
@@ -675,14 +675,14 @@ def handle_message(event):
                         image_url = 'https://the1851chronicle.files.wordpress.com/2018/04/screen-shot-2018-04-26-at-1-33-23-pm.png',
                         action = URITemplateAction(
                             label = '噤界',
-                            uri = 'https://pttplay.com/vod-play-id-RjlB-src-1-num-6x.html'
+                            uri = 'https://drive.google.com/open?id=1k-IRWVKxZHxhc8cf26cNPnMHmi_4HY68'
                         )
                     ),
                     ImageCarouselColumn(
                         image_url = 'https://media.putyourself.in/pysiuploads/2019/10/event-the-garden-of-evening-mists-1118.jpg',
                         action = URITemplateAction(
                             label = '夕霧花園',
-                            uri = 'http://www.777drama.com/vod/14/19322play.html?19322-1-4'
+                            uri = 'https://drive.google.com/open?id=1wKLCWdnxtembHC3QxbVziE67vTatEtmk'
                         )
                     ),
                     ImageCarouselColumn(
@@ -696,7 +696,7 @@ def handle_message(event):
                         image_url = 'https://upload.wikimedia.org/wikipedia/zh/d/d4/The_Invisible_Man_2020_poster.jpg',
                         action = URITemplateAction(
                             label = '隱形人',
-                            uri = 'http://www.99kubo.tv/vod-play-id-150195-sid-0-pid-1-zuida.html'
+                            uri = 'https://drive.google.com/open?id=113ys0pog33E1Nr5JsDjA7ynzI8TkLNCv'
                         )
                     )
                 ]
