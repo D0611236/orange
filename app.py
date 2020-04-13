@@ -78,6 +78,15 @@ def handle_message(event):
         message = TextSendMessage(text = '我也不知道')
 
 #############################################
+#回傳貼圖訊息
+    if(get.lower() == 'ok'):
+        message = StickerSendMessage(
+            package_id = '2',
+            sticker_id = '151'
+        )
+        
+
+#############################################
 #回傳圖片訊息
     if(get == '庭庭抽'):
         message = ImageSendMessage(
