@@ -455,7 +455,7 @@ def handle_message(event):
     
 #############################################
 #回傳ButtonsTemplate訊息
-    if('哈' in get):
+    if(get == '來聽垃圾歌'):
         message = TemplateSendMessage(
             alt_text = '打開手機，許願池在你的手機裡?',
             template = ButtonsTemplate(
@@ -605,7 +605,7 @@ def handle_message(event):
                             ),
                             MessageTemplateAction(
                                 label = '點歌許願池',
-                                text = '哈'
+                                text = '來聽垃圾歌'
                             )
                         ]
                     ),
