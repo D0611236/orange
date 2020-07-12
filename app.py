@@ -698,7 +698,7 @@ def handle_message(event):
                         image_url = 'https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg',
                         action = URITemplateAction(
                             label = '小丑',
-                            uri = 'https://pttplay.com/vod-play-id-kXxBp-src-4-num-mV.html'
+                            uri = 'http://www.gimyvod.com/video/69967/1-1.html'
                         )
                     ),
                     ImageCarouselColumn(
