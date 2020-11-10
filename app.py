@@ -447,7 +447,8 @@ def handle_message(event):
                 preview_image_url = 'https://i.imgur.com/OlgCSqb.jpg'
             )
     if('https://www.instagram.com/p/' in get):
-        instagramSave = get[:get.find('?')] + 'media/?size=l'
+        #instagramSave = get[:get.find('?')] + 'media/?size=l'
+        instagramSave = get[:get.rfind('/')] + '/media/?size=l'
         message = ImageSendMessage(
             original_content_url = instagramSave,
             preview_image_url = instagramSave
