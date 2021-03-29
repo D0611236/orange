@@ -146,13 +146,18 @@ def handle_message(event):
             preview_image_url = 'https://i.imgur.com/FabmRZg.jpg'
         )
     if(get == '阿倩仔抽'):
-        result = random.randint(0, 1)
+        result = random.randint(0, 2)
         if(result == 0):
             message = ImageSendMessage(
                 original_content_url = 'https://i.imgur.com/vi3VuEx.jpg',
                 preview_image_url = 'https://i.imgur.com/vi3VuEx.jpg'
             )
-        if(result > 0):
+        if(result == 1):
+            message = ImageSendMessage(
+                original_content_url = 'https://i.imgur.com/XZ8pVgg.jpg',
+                preview_image_url = 'https://i.imgur.com/XZ8pVgg.jpg'
+            )
+        if(result > 1):
             message = ImageSendMessage(
                 original_content_url = 'https://i.imgur.com/PTMT6fO.jpg',
                 preview_image_url = 'https://i.imgur.com/PTMT6fO.jpg'
