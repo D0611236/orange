@@ -51,7 +51,7 @@ def handle_message(event):
 #############################################
 #回傳文字訊息
     if('@' in get):
-        message = get
+        message = TextSendMessage(text = get)
     if(get == '@咪嚕'):
         message = TextSendMessage(text = '@咪嚕')
     if(get == 'stock'):
