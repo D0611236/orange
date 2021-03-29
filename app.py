@@ -50,8 +50,6 @@ def handle_message(event):
 
 #############################################
 #回傳文字訊息
-    if(get == '@咪嚕'):
-        message = TextSendMessage(text = '@咪嚕')
     if(get == 'stock'):
         message = TextSendMessage(text = 'https://medium.com/ai%E8%82%A1%E4%BB%94/%E5%AD%B8%E6%9C%83%E7%94%A8%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E9%A0%90%E6%B8%AC%E8%82%A1%E5%83%B9-%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B%E6%95%99%E5%AD%B8%E8%88%87%E5%AF%A6%E4%BD%9C-b057e7343ca4\n\nhttps://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/548204/\n\nhttps://ithelp.ithome.com.tw/users/20111390/ironman/1791?page=3')
     if(get == '？' or get =='?'):
@@ -91,15 +89,39 @@ def handle_message(event):
 #############################################
 #回傳圖片訊息
     if(get == '庭庭抽'):
-        message = ImageSendMessage(
-            original_content_url = 'https://i.imgur.com/fTlDhKn.jpg',
-            preview_image_url = 'https://i.imgur.com/fTlDhKn.jpg'
-        )
+        result = random.randint(0, 3)
+        if(result == 0):
+            message = ImageSendMessage(
+                original_content_url = 'https://i.imgur.com/fTlDhKn.jpg',
+                preview_image_url = 'https://i.imgur.com/fTlDhKn.jpg'
+            )
+        if(result == 1):
+            message = ImageSendMessage(
+                original_content_url = 'https://i.imgur.com/Lie5LV3.jpg',
+                preview_image_url = 'https://i.imgur.com/Lie5LV3.jpg'
+            )
+        if(result == 2):
+            message = ImageSendMessage(
+                original_content_url = 'https://i.imgur.com/ixxFYtP.jpg',
+                preview_image_url = 'https://i.imgur.com/ixxFYtP.jpg'
+            )
+        if(result > 2):
+            message = ImageSendMessage(
+                original_content_url = 'https://i.imgur.com/8uT0b61.jpg',
+                preview_image_url = 'https://i.imgur.com/8uT0b61.jpg'
+            )
     if(get == '庭婆抽'):
-        message = ImageSendMessage(
-            original_content_url = 'https://i.imgur.com/RyhdOXR.jpg',
-            preview_image_url = 'https://i.imgur.com/RyhdOXR.jpg'
-        )
+        result = random.randint(0, 1)
+        if(result == 0):
+            message = ImageSendMessage(
+                original_content_url = 'https://i.imgur.com/RyhdOXR.jpg',
+                preview_image_url = 'https://i.imgur.com/RyhdOXR.jpg'
+            )
+        if(result > 0):
+            message = ImageSendMessage(
+                original_content_url = 'https://i.imgur.com/W3fhMDg.jpg',
+                preview_image_url = 'https://i.imgur.com/W3fhMDg.jpg'
+            )
     if(get == '剛剛在Dcard看到一個可愛der女森'):
         message = ImageSendMessage(
             original_content_url = 'https://i.imgur.com/bc7Oig5.jpg',
