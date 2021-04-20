@@ -54,6 +54,8 @@ def handle_message(event):
         message = TextSendMessage(text = 'https://medium.com/ai%E8%82%A1%E4%BB%94/%E5%AD%B8%E6%9C%83%E7%94%A8%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E9%A0%90%E6%B8%AC%E8%82%A1%E5%83%B9-%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B%E6%95%99%E5%AD%B8%E8%88%87%E5%AF%A6%E4%BD%9C-b057e7343ca4\n\nhttps://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/548204/\n\nhttps://ithelp.ithome.com.tw/users/20111390/ironman/1791?page=3')
     if(get == '？' or get =='?'):
         message = TextSendMessage(text = '?')
+    if(get == '愛情來的太快'):
+        message = TextSendMessage(text = '就像龍捲風')
     if('如何' in get):
         get = 'replySituation'
     if('要嘛' in get):
